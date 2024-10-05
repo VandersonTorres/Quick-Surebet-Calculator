@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("form");
     const resultDiv = document.querySelector(".result");
 
-    function calculateArbitrage(funds, odd1, odd2) {
+    function calculateHedge(funds, odd1, odd2) {
         const isHedge = (1 / odd1) + (1 / odd2) < 1;
 
         if (!isHedge) {
@@ -54,6 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        calculateArbitrage(funds, odd1, odd2);
+        calculateHedge(funds, odd1, odd2);
+    });
+
+    form.addEventListener("reset", function () {
+        resultDiv.innerHTML = "";
+        resultDiv.classList.remove("result-green", "result-yellow", "result-red");
     });
 });

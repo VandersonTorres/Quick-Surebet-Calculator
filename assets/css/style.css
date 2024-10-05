@@ -1,150 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
 body {
-    background-size: cover;
-    background-repeat: space;
-    background-color: #076b7cb7;
-    background-clip: content-box;
+    font-family: Arial, sans-serif;
+    background-color: #5bb7c3;
+    margin: 0;
+    padding: 0;
     display: flex;
-    font-family: 'Open sans', sans-serif;
-    font-size: 1.1em;
-    line-height: 1.5em;
     justify-content: center;
     align-items: center;
-    text-align: justify;
-    height: fit-content;
-}
-
-h1 {
-    text-align: justify;
-    padding-left: 20px;
+    height: 100vh;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    flex-flow:column;
-    box-sizing: border-box;
-    margin: 16px;
-    height: auto;
-    box-shadow: rgba(0, 0, 0, 0.747) 0px 5px 10px;
-    background-color: #ffffff59;
-    justify-content: space-around;
-    border-radius: 20px;
-}
-
-.table {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
-    table-layout: auto;
-    width: auto;
-    white-space: nowrap;
-    margin: 20px;
-    padding: 10px;
-    border: groove 1px #111111;
+    text-align: center; /* Centraliza o conteúdo no container */
+    background-color: #85bdc7;
+    padding: 20px;
     border-radius: 10px;
-    border-bottom: 5px solid #000000bd;
-    border-right: 5px solid #000000bd;
-    justify-content:baseline;
-    align-items: flex-end;
-    text-align: justify;
-    font-size: smaller;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%; /* Garante responsividade */
 }
 
-#execution {
-    width: auto;
-    height: auto;
-    text-align: left;
-    margin: 0 20px;
-    padding: 10px;
-    white-space: nowrap;
-}
-
-#execution h4 {
-    text-align: center;
-}
-
-#execution .img  {
-    white-space: nowrap;
-}
-
-#form {
-    display: flex;
-    flex-direction: column;
-    flex-flow:column;
-    box-sizing: border-box;
-}
-
-#form input, label, button {
+h1 {
+    font-size: 24px;
+    color: #2e2e2e;
     margin-bottom: 10px;
-    padding: 5px;
 }
 
-#form input {
-    height: 30px;
-    padding: 5px;
-    border-radius: 10px;
-    border: 0;
-    border-bottom: 3px solid #000000bd;
-    border-right: 3px solid #000000bd;
+p {
+    margin-bottom: 20px;
+    color: #333;
 }
 
-#form button {
-    width: fit-content;
-    padding: 5px;
-    justify-content: center;
+label {
+    display: block;
+    text-align: center; /* Centraliza o texto dos labels */
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"], input[type="number"] {
+    width: 80%; /* Ajusta o tamanho do input */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center; /* Centraliza o texto dentro do input */
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4d4d4d;
+    color: #fff;
     border: none;
-    border-radius: 10px;
-    background: rgba(32, 32, 32, 0.726);
-    color: #fffffff3;
-    font-size: 18px;
-    font-weight: 700;
-    height: 50px;
+    border-radius: 5px;
     cursor: pointer;
-    margin: auto;
+    font-size: 16px;
 }
 
-#form button:hover {
-    background-color: rgb(36, 36, 36);
+button:hover {
+    background-color: #666;
 }
 
-.result-true {
-    background-color: rgba(2, 78, 25, 0.699);
-    color: #ffff;
-    margin: 5px 20px;
-    padding: 2px;
+.result {
+    margin-top: 20px;
+    font-size: 18px;
     font-weight: bold;
-    font-size: smaller;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.result-false {
-    background-color: rgba(122, 6, 6, 0.699);
-    color: #ffff;
-    margin: 5px 20px;
-    padding: 2px;
-    font-weight: bold;
-    font-size: smaller;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.hide {
-    display: none;
-}
-
-@media (min-widht: 500px) and (max-width: 1000px){
-	.container {
-		box-sizing: border-box;
-        margin: 16px;
-    }
 }
 
 .result-red {
-    background-color: rgba(122, 6, 6, 0.5); /* Vermelho transparente */
+    background-color: rgba(122, 6, 6, 0.5);
     color: #fff;
     margin: 5px 20px;
     padding: 10px;
@@ -155,7 +82,7 @@ h1 {
 }
 
 .result-green {
-    background-color: rgba(2, 78, 25, 0.5); /* Verde transparente */
+    background-color: rgba(2, 78, 25, 0.5);
     color: #fff;
     margin: 5px 20px;
     padding: 10px;
@@ -166,7 +93,7 @@ h1 {
 }
 
 .result-yellow {
-    background-color: rgba(255, 255, 0, 0.5); /* Amarelo transparente */
+    background-color: rgba(255, 255, 0, 0.5);
     color: #000;
     margin: 5px 20px;
     padding: 10px;
